@@ -1,0 +1,47 @@
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  font-size: 48px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #333;
+}
+
+.cell.X {
+  color: #f00;
+}
+
+.cell.O {
+  color: #00f;
+}
+
+.status {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}

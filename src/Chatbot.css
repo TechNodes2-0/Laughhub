@@ -1,0 +1,129 @@
+/* Chat messages container */
+.chat-chat-messages {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 8px;
+  height: 300px;
+  overflow-y: scroll;
+  padding: 16px;
+  background-image: url(https://th.bing.com/th/id/OIP.xddyM5Z5llwe5nz0xAnhvAHaD_?pid=ImgDet&rs=1);
+  
+  background-size: cover;
+  background-repeat:no-repeat;
+}
+#uniq{
+  /* background-image: url(https://th.bing.com/th/id/OIP.xddyM5Z5llwe5nz0xAnhvAHaD_?pid=ImgDet&rs=1); */
+  /* background-image: url(https://cdn.dribbble.com/users/42048/screenshots/8350927/robotintro_dribble.gif); */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 300px;
+  overflow-y: scroll;
+  padding: 16px;
+  /* background-image: url(https://th.bing.com/th/id/OIP.xddyM5Z5llwe5nz0xAnhvAHaD_?pid=ImgDet&rs=1); */
+  
+  background-image: url(https://www.epikindifi.com/wp-content/uploads/2019/12/1_yE-S7HG0Rg-ACAcnjvKf5Q.gif);
+  background-size: cover;
+  background-size:no-repeat;
+  background-position:center ;
+
+}
+
+
+/* define the keyframes for the animation */
+@keyframes changing-bg {
+  0% {
+    background-image: url(https://cdn.dribbble.com/users/42048/screenshots/8350927/robotintro_dribble.gif);
+  }
+  50% {
+    background-image: url(https://cdn.dribbble.com/users/25514/screenshots/3997009/media/23dcb526ed514472dde3065e2ee9ddf9.gif);
+  }
+  100% {
+    background-image: url(https://www.epikindifi.com/wp-content/uploads/2019/12/1_yE-S7HG0Rg-ACAcnjvKf5Q.gif);
+  }
+}
+
+/* apply the animation to an element */
+.my-element,#uniq {
+  animation-name: changing-bg; /* specify the name of the animation */
+  animation-duration: 10s; /* specify the duration of the animation */
+  animation-timing-function: ease-in-out; /* specify the timing function of the animation */
+ /* specify the number of times the animation should repeat */
+  background-image: url(https://www.epikindifi.com/wp-content/uploads/2019/12/1_yE-S7HG0Rg-ACAcnjvKf5Q.gif); /* set the initial background image */
+  background-size: cover; /* set the background size to cover the entire element */
+}
+
+*{
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* User message */
+
+  .user-message {
+    align-self: flex-end;
+    max-width: 80%;
+    padding: 8px 12px;
+    border-radius: 15px;
+    background-color: #02dcf9;
+    color: #fff;
+    text-align: right;
+  }  
+
+
+.message-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+
+
+/* Bot message */
+.bot-message {
+  align-self: flex-start;
+  max-width: 80%;
+  padding: 8px 12px;
+  border-radius: 15px;
+  background-color: #fbff0e;
+  color: #222;
+  text-align: center;
+}
+
+/* Chat input container */
+.chat-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Input field */
+.chat-input input[type="text"] {
+  flex-grow: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 16px;
+  background-color: #fff;
+  color: #222;
+}
+
+/* Send button */
+.chat-input button {
+  background-color: #f9a602;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.chat-input button:hover {
+  background-color: #fbff0e;
+}
