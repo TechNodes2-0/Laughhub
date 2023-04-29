@@ -1,9 +1,18 @@
 # FunnyHub
 
-[![Website](https://img.shields.io/website?url=https://laughhub.tech/)](https://laughhub.tech/)
-[![GitHub license](https://img.shields.io/github/license/YOUR_USERNAME/FunnyHub)](https://github.com/YOUR_USERNAME/FunnyHub/blob/main/LICENSE)
+<br/>
 
 ![FunnyHub Logo](chatbot/public/2.jpg)
+
+## Table of Contents
+
+- [Description](#description)
+- [Demo](#demo)
+- [Getting Started](#getting-started)
+- [Technologies Used](#technologies-used)
+- [Contributors](#contributors)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
 ## Description
 
