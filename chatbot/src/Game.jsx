@@ -60,15 +60,15 @@ function Game() {
 
   return (
     <div className="game-container">
-      <h1 className="text-4xl font-bold mb-4">Memory Game</h1>
-      <p className="text-lg mb-2">Round: {round}</p>
-      <p className="text-lg mb-4">Score: {score}</p>
-      <div className="flex flex-wrap justify-center">
+      <h1 className="game-title">Memory Game</h1>
+      <p className="game-text">Round: {round}</p>
+      <p className="game-text">Score: {score}</p>
+      <div className="button-container">
         {emojis.map((emoji) => (
           <button
             key={emoji}
             id={emoji}
-            className="emoji-button p-4 m-2 text-4xl rounded-lg bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            className="emoji-button"
             onClick={() => handleButtonClick(emoji)}
             disabled={gameOver}
           >
@@ -77,18 +77,15 @@ function Game() {
         ))}
       </div>
       {gameOver && (
-        <div className="fixed inset-0 z-10 flex items-center justify-center">
-          <div className="bg-gray-700 opacity-80 absolute inset-0"></div>
-          <div className="bg-white p-8 rounded-lg z-20">
-            <h2 className="text-2xl font-bold mb-2">Game Over</h2>
-            <p className="text-lg mb-4">Your final score was {score}</p>
-            <button
-              className="px-4 py-2 text-lg font-bold rounded-lg bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
-              onClick={() => window.location.reload()}
-            >
-              Play Again
-            </button>
-          </div>
+        <div className="game-over">
+          <h2 className="game-over-title">Game Over</h2>
+          <p className="game-over-text">Your final score was {score}</p>
+          <button
+            className="play-again-button"
+            onClick={() => window.location.reload()}
+          >
+            Play Again
+          </button>
         </div>
       )}
     </div>

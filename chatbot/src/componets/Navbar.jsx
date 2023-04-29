@@ -12,10 +12,10 @@ const Navbar = () => {
           <img
             src="https://cdn2.downdetector.com/static/uploads/logo/Dankmemer_logo.png"
             className="h-8 mr-3"
-            alt="FunnyHub"
+            alt="Laughhub"
           />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            FunnyHub
+            Laughhub
           </span>
         </a>
         <button

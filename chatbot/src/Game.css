@@ -1,5 +1,11 @@
 * {
-  color: lightseagreen;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1f2937;
+  color: white;
+  font-family: Arial, sans-serif;
 }
 
 .game-container {
@@ -7,16 +13,41 @@
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
+  max-width: 800px;
+  margin: 50px auto 0 auto;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 48px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 p {
   font-size: 24px;
   margin: 10px 0;
+}
+
+.score-card {
+  background-color: #2d3748;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.score-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.score-card p {
+  margin: 0;
+  font-size: 48px;
 }
 
 .button-container {
@@ -31,15 +62,20 @@ p {
   width: 100px;
   height: 100px;
   margin: 10px;
-  border-radius: 50%;
+  border-radius: 10px;
   border: none;
   background-color: #fff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .emoji-button:hover {
   transform: scale(1.1);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .emoji-button:active {
@@ -49,4 +85,78 @@ p {
 .highlight {
   background-color: #ffc107;
   box-shadow: none;
+}
+
+.share-button {
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1da1f2;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.share-button:hover {
+  background-color: #0d8bf0;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .emoji-button {
+    font-size: 24px;
+    width: 75px;
+    height: 75px;
+  }
+}
+.play-again-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.play-again-button:hover {
+  background-color: #218838;
+}
+
+.play-again-button:active {
+  background-color: #1e7e34;
+}
+
+.play-again-button:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #ffffff, 0px 0px 0px 4px #28a745;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.play-again-button:before {
+  content: "\f01e";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 24px;
+  margin-right: 10px;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }

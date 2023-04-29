@@ -8,11 +8,10 @@ import Stone from "./componets/Stone";
 import Question from "./Question";
 import alanBtn from "@alan-ai/alan-sdk-web";
 function App() {
-
   const [greetingWasSaid, setgreetingWasSaid] = useState(false);
   const alanBtnRef = useRef({}).current;
   useEffect(() => {
-  var alanBtnInstance= alanBtn({
+    var alanBtnInstance = alanBtn({
       key: "08a166d1453c12e6bdd4654d5969a9712e956eca572e1d8b807a3e2338fdd0dc/stage",
       onCommand: (commandData) => {
         if (commandData.command === "go:back") {
@@ -23,9 +22,7 @@ function App() {
         if (status === "ONLINE") {
           if (!greetingWasSaid) {
             await alanBtnInstance.activate();
-            alanBtnInstance.playText(
-              `Hello Namaste Nishit Bariya?`
-            );
+            alanBtnInstance.playText(`Hello Namaste Nishit Bariya?`);
             setgreetingWasSaid(true);
           }
         }
