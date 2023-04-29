@@ -17,7 +17,7 @@ function ChatBot() {
       // If the input contains an image file name, make a call to localhost:5000
 
       try {
-        const response = await axios.post("http://localhost:5002/", {
+        const response = await axios.post("https://codecompanionvinayak.onrender.com/img", {
           prompt: inputValue,
         });
 
