@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Chatbot.css";
 import "animate.css";
-
+// import Placeholder from 'react-placeholder';
 function ChatBot() {
   const [inputValue, setInputValue] = useState("");
   const [messages, setMessages] = useState([]);
@@ -89,6 +89,8 @@ function ChatBot() {
           value={inputValue}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
+        placeholder="You can ask Anything useful Or You can give Image prompt with img"
+          
         />
         <button className="" onClick={sendMessage}>
           Send

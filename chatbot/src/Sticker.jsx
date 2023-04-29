@@ -202,6 +202,8 @@ function Chat() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           className="chat-input"
+          placeholder="You can get gifs,stickers and emojis"
+          
           onKeyPress={(event) => {
             if (event.key === "Enter") {
               handleSend();
