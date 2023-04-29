@@ -31,16 +31,13 @@ const Notification = () => {
     })
     .catch((err) => console.log('failed: ', err));
 
-  return (<div>
-
-    {/* {Notification &&( <div>
-        <p><b>{notification?.title}</b></p>
-        <p>{notification?.body}</p>
-      </div>
-
-    )} */}
-         <Toaster/>
+  return (<div class="my">
+    <br></br>
+             <Toaster/>
   </div>
+
+      
+
 
   )
 }
