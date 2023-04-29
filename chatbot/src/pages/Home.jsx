@@ -8,7 +8,7 @@ import Stone from "../componets/Stone";
 import Question from "../Question";
 import alanBtn from "@alan-ai/alan-sdk-web";
 import { useAuth0 } from "@auth0/auth0-react";
-
+import Notification from "../Notification";
 function App() {
   const [greetingWasSaid, setgreetingWasSaid] = useState(false);
   const alanBtnRef = useRef({}).current;
@@ -204,7 +204,7 @@ function App() {
         </button>
       </div>
       {/* Render different components based on the current mode */}
-      {mode === "chat" && <ChatBot />}
+      {mode === "chat" && <><ChatBot /><Notification/></>}
       {mode === "memes" && <Sticker />}
       {mode === "game" && (
         <div className="flex flex-col items-center justify-center">

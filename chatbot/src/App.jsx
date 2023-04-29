@@ -12,6 +12,8 @@ import Homepage from "./pages/Homepage";
 import { Route, Routes } from "react-router-dom";
 import Joke from "./voice/Joke";
 import Question from "./Question";
+import ChatBot from "./Chatbot";
+import Notification from './Notification'
 
 function App() {
   return (
@@ -38,6 +40,7 @@ function App() {
         />
 
         <Route path="/" element={<Homepage />} />
+        <Route path="/fire" element={<><ChatBot /><Notification/></>} />
 
         {/* <Route path="/stone" element={<Stone />} /> */}
       </Routes>
