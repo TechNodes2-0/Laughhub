@@ -34,9 +34,12 @@ function ChatBot() {
     } else {
       // If the input does not contain an image file name, make a call to localhost:5002
       try {
-        const response = await axios.post("http://localhost:5000/", {
-          prompt: inputValue,
-        });
+        const response = await axios.post(
+          "https://codecompanionvinayak.onrender.com",
+          {
+            prompt: inputValue,
+          }
+        );
 
         if (response.data.bot) {
           const botMessage = { text: response.data.bot, isBot: true };
