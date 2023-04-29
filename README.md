@@ -1,8 +1,8 @@
-# FunnyHub
+# LaughHub 
 
 <br/>
 
-![FunnyHub Logo](chatbot/public/2.jpg)
+![LaughHub  Logo](chatbot/public/2.jpg)
 
 ## Table of Contents
 
@@ -16,9 +16,9 @@
 
 ## Description
 
-FunnyHub is a hilarious bot with advanced AI voice assistance that offers fun conversations, funny stories, a meme generator, and three to four entertaining games. It's the perfect destination for anyone looking for a good laugh and a break from their daily routine.
+LaughHub  is a hilarious bot with advanced AI voice assistance that offers fun conversations, funny stories, a meme generator, and three to four entertaining games. It's the perfect destination for anyone looking for a good laugh and a break from their daily routine.
 
-![FunnyHub Homepage](https://github.com/Nishitbaria/Laughhub/blob/main/chatbot/public/home.png?raw=true)
+![LaughHub  Homepage](https://github.com/Nishitbaria/Laughhub/blob/main/chatbot/public/home.png?raw=true)
 
 ## Demo
 
