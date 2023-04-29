@@ -1,0 +1,27 @@
+name: Code update check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Check for code updates
+      id: code-update
+      run: |
+        git diff --name-only HEAD^ HEAD | grep -E '\.(js|jsx|html|css)$' | echo ::set-output name=updated::$(cat)
+      
+    - name: Send notification
+      if: steps.code-update.outputs.updated
+      run: |
+        echo "Code has been updated in the following files: ${{ steps.code-update.outputs.updated }}"
