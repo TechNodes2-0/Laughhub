@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Chatbot.css";
 import "animate.css";
-import { doc, setDoc } from "firebase/firestore"; 
+import { doc, setDoc,collection,addDoc } from "firebase/firestore"; 
 
 // Add a new document in collection "cities"
 
@@ -114,7 +114,7 @@ function ChatBot() {
         if (response.data.bot) {
           const botMessage = { text: response.data.bot, isBot: true };
           setMessages((messages) => [...messages, botMessage]);
-          const wait= await setDoc(doc(db, "messages", "Chats"), {
+          const wait= await addDoc(collection(db, "messages"), {
             prompt:inputValue,
             response:`${botMessage.text}`
           });
