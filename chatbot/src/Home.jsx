@@ -139,7 +139,10 @@ function App() {
               ? "bg-pink-500 text-white"
               : "bg-white text-pink-500"
           }`}
-          onClick={() => handleModeChange("chat")}
+          onClick={() => {
+            
+            handleModeChange("chat")
+        }}
         >
           Chat{" "}
           <span role="img" aria-label="chat">

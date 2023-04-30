@@ -35,11 +35,7 @@ function ChatBot() {
   const saveMessage = async (message) => {
     console.log(message);
     try {
-      await setDoc(doc(db, "cities", "LA"), {
-        name: "Los Angeles",
-        state: "CA",
-        country: "USA"
-      });
+
       // await setDoc(doc(db, "bonam", "info"), {
      
       //   answer:message
@@ -52,9 +48,7 @@ function ChatBot() {
   };
 
   // Send a push notification using Firebase Cloud Messaging (FCM)
-  const sendPushNotification = async (message) => {
-    
-      getToken(messaging, {vapidKey: "BOTCBlAA7vkwGn93Oi17NSRjCGkjkzeDkHYnyqb6xuU6aIIiFA25bI8HCYs7iRJAv7o7YvxO0Q2rUYFj6ARIpSo"});
+  
     
       //  const registrationToken = await getToken();
       // console.log("Registration token: ", registrationToken);
@@ -73,7 +67,7 @@ function ChatBot() {
     // } catch (error) {
     //   console.error(error);
     // }
-  };
+  
 
   const sendMessage = async () => {
     if (!inputValue) return;
@@ -82,8 +76,8 @@ function ChatBot() {
     setInputValue("");
 
     // Save the message to Google Cloud Firestore
-    
     await saveMessage(message);
+   
     if (inputValue.includes("img")) {
       // If the input contains an image file name, make a call to localhost:5000
 
@@ -96,15 +90,13 @@ function ChatBot() {
           const botMessage = { image: response.data.botimage, isBot: true };
           setMessages((messages) => [...messages, botMessage]);
 
-       
-          await sendPushNotification(botMessage);
         } else {
           const botMessage = { text: response.data.bot, isBot: true };
           setMessages((messages) => [...messages, botMessage]);
-
+          console.log("call");
           // Send a push notification for the bot's response
-          await saveMessage(botMessage);
-          await sendPushNotification(botMessage);
+
+          console.log(wait);
         }
       } catch (error) {
         console.error(error);
@@ -122,9 +114,11 @@ function ChatBot() {
         if (response.data.bot) {
           const botMessage = { text: response.data.bot, isBot: true };
           setMessages((messages) => [...messages, botMessage]);
-
-          // Send a push notification for the bot's response
-          await sendPushNotification(botMessage);
+          const wait= await setDoc(doc(db, "messages", "Chats"), {
+            prompt:inputValue,
+            response:`${botMessage.text}`
+          });
+         
         }
       } catch (error) {
         console.error(error);
